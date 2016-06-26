@@ -1,0 +1,9 @@
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Debug\AthanManager.exe.config
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.Properties.Resources.resources
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.csproj.GenerateResource.Cache
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Debug\AthanManager.exe
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Debug\AthanManager.pdb
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.exe
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.pdb
+c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.Form1.resources
+C:\Users\Dell\Documents\Visual Studio 2015\Projects\AthanManager\AthanManager\bin\Debug\app.config
