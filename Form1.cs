@@ -20,6 +20,8 @@ namespace AthanManager
         private ContextMenu trayMenu;
         private bool hasBeenLoaded = false;
 
+        private string fajr, dhuhr, asr, maghrib, isha;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,11 +29,7 @@ namespace AthanManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (currentCityTxt.Text != "" && currentCityTxt.Text != string.Empty)
-            {
-                Properties.Settings.Default["current_city"] = currentCityTxt.Text;
-            }
-            Properties.Settings.Default.Save();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -62,9 +60,14 @@ namespace AthanManager
             }
 
             currentCityTxt.Text = Properties.Settings.Default["current_city"].ToString();
-            //serverAddress = serveraddresstxt.Text = Properties.Settings.Default["serveraddress"].ToString();
-            //watchPath = watchpath_txt.Text = Properties.Settings.Default["watchPath"].ToString();
-            //watchFile = watchfile_txt.Text = Properties.Settings.Default["watchFile"].ToString();
+
+            fajr = Properties.Settings.Default["fajr"].ToString();
+            dhuhr = Properties.Settings.Default["dhuhr"].ToString();
+            asr = Properties.Settings.Default["asr"].ToString();
+            maghrib = Properties.Settings.Default["maghrib"].ToString();
+            isha = Properties.Settings.Default["isha"].ToString();
+
+            //MessageBox.Show(fajr + dhuhr + asr + maghrib + isha);
         }
 
         // Define the event handlers. 
@@ -135,21 +138,56 @@ namespace AthanManager
             string city = currentCityTxt.Text;
             if(city != "" && city!=string.Empty)
             {
+                label2.Text = "جاري التحميل ...";
                 string response = myVars.update_pray_times(city.ToLower());
-                MessageBox.Show(response);
+                //MessageBox.Show(response);
                 var json_serializer = new JavaScriptSerializer();
                 var response_object = (IDictionary<string, object>)json_serializer.DeserializeObject(response.Replace("\"items\":[{","").Replace("\"}],","\","));
-                MessageBox.Show(response_object["fajr"].ToString());
-                MessageBox.Show(response_object["dhuhr"].ToString());
-                MessageBox.Show(response_object["asr"].ToString());
-                MessageBox.Show(response_object["maghrib"].ToString());
-                MessageBox.Show(response_object["isha"].ToString());
+                string output = "";
+                try
+                {
+                    fajr = response_object["fajr"].ToString();
+                    dhuhr = response_object["dhuhr"].ToString();
+                    asr = response_object["asr"].ToString();
+                    maghrib = response_object["maghrib"].ToString();
+                    isha = response_object["isha"].ToString();
+
+                    output += "الفجر: " + fajr;
+                    output += " / الظهر: " + dhuhr;
+                    output += " / العصر: " + asr;
+                    output += " / المغرب: " + maghrib;
+                    output += " / العشاء: " + isha;
+
+                    Properties.Settings.Default["current_city"] = city;
+                    Properties.Settings.Default["fajr"] = fajr;
+                    Properties.Settings.Default["dhuhr"] = dhuhr;
+                    Properties.Settings.Default["asr"] = asr;
+                    Properties.Settings.Default["maghrib"] = maghrib;
+                    Properties.Settings.Default["isha"] = isha;
+                    Properties.Settings.Default.Save();
+
+                }
+                catch(KeyNotFoundException ex)
+                {
+                    output = "المدينة المدخلة غير صالحة .. يرجى إدخال اسم مدينة صحيح";
+                }
+                label2.Text = output;
             }
             else
             {
                 MessageBox.Show("يرجى إدخال المدينة أولاً");
                 return;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = "الساعة الآن: " + DateTime.Now.ToString("hh:mm:ss tt").ToLower();
+        }
+
+        private void currentCityTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

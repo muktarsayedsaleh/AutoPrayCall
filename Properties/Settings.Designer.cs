@@ -25,13 +25,73 @@ namespace AthanManager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("oman")]
+        [global::System.Configuration.DefaultSettingValueAttribute("مسقط")]
         public string current_city {
             get {
                 return ((string)(this["current_city"]));
             }
             set {
                 this["current_city"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string fajr {
+            get {
+                return ((string)(this["fajr"]));
+            }
+            set {
+                this["fajr"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dhuhr {
+            get {
+                return ((string)(this["dhuhr"]));
+            }
+            set {
+                this["dhuhr"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string asr {
+            get {
+                return ((string)(this["asr"]));
+            }
+            set {
+                this["asr"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string maghrib {
+            get {
+                return ((string)(this["maghrib"]));
+            }
+            set {
+                this["maghrib"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string isha {
+            get {
+                return ((string)(this["isha"]));
+            }
+            set {
+                this["isha"] = value;
             }
         }
     }

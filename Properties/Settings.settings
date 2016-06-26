@@ -3,7 +3,22 @@
   <Profiles />
   <Settings>
     <Setting Name="current_city" Type="System.String" Scope="User">
-      <Value Profile="(Default)">oman</Value>
+      <Value Profile="(Default)">مسقط</Value>
+    </Setting>
+    <Setting Name="fajr" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="dhuhr" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="asr" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="maghrib" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="isha" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
