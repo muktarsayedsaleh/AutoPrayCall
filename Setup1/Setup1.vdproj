@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_19615C8CA8BF1F8B06CFAE3B1F4EF868"
+        "OwnerKey" = "8:_83D5EABC8BA990CC226D7FEABA9DC0CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_83D5EABC8BA990CC226D7FEABA9DC0CD"
+        "OwnerKey" = "8:_AF7D6E53A7E64B92A79F342E1D6F74C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8B34401F13272D9124A455AE5B7F940C"
         "OwnerKey" = "8:_AF7D6E53A7E64B92A79F342E1D6F74C8"
         "MsmSig" = "8:_UNDEFINED"
@@ -22,6 +34,12 @@
         "Entry"
         {
         "MsmKey" = "8:_AF7D6E53A7E64B92A79F342E1D6F74C8"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BA58BDA1304B4FEA9B3D4903D4E3520B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -35,6 +53,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8B34401F13272D9124A455AE5B7F940C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_83D5EABC8BA990CC226D7FEABA9DC0CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -106,20 +130,40 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8B34401F13272D9124A455AE5B7F940C"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_19615C8CA8BF1F8B06CFAE3B1F4EF868"
+            {
+            "SourcePath" = "8:wmp.dll"
+            "TargetName" = "8:wmp.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_F195E9C85AB7476188695F54F0AD8630"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:TRUE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_83D5EABC8BA990CC226D7FEABA9DC0CD"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CSCore, Version=1.1.5992.18249, Culture=neutral, PublicKeyToken=5a08f2b6f4415dea, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_8B34401F13272D9124A455AE5B7F940C"
+                    "_83D5EABC8BA990CC226D7FEABA9DC0CD"
                     {
-                    "Name" = "8:CSCore.dll"
+                    "Name" = "8:Interop.WMPLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:CSCore.dll"
+            "SourcePath" = "8:Interop.WMPLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_F195E9C85AB7476188695F54F0AD8630"
@@ -135,6 +179,57 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8B34401F13272D9124A455AE5B7F940C"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CSCore, Version=1.1.5992.18249, Culture=neutral, PublicKeyToken=5a08f2b6f4415dea, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_8B34401F13272D9124A455AE5B7F940C"
+                    {
+                    "Name" = "8:CSCore.dll"
+                    "Attributes" = "3:516"
+                    }
+                }
+            "SourcePath" = "8:CSCore.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_F195E9C85AB7476188695F54F0AD8630"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:TRUE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BA58BDA1304B4FEA9B3D4903D4E3520B"
+            {
+            "SourcePath" = "8:..\\AthanManager\\icon.ico"
+            "TargetName" = "8:icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_F195E9C85AB7476188695F54F0AD8630"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EE3686F517484F5398751A06A031A87F"
@@ -212,26 +307,26 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup1"
+        "ProductName" = "8:Auto Athan Call"
         "ProductCode" = "8:{95FE707D-9413-465D-B8F7-334521E79D21}"
-        "PackageCode" = "8:{85263F74-36E7-4E6B-8EF3-9EE024A65724}"
+        "PackageCode" = "8:{0E4687DF-D33D-4DAD-888F-2EDE9F49E2DB}"
         "UpgradeCode" = "8:{2475BFAE-F965-46AA-B69D-AD9FAF355990}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Muktar Sayed Saleh"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup1"
+        "Title" = "8:Auto. Athan Call"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Muktar Sayed Saleh"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_BA58BDA1304B4FEA9B3D4903D4E3520B"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -334,6 +429,34 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_494A8F7E9E8D47B8B245A535E7F2AB33"
+            {
+            "Name" = "8:Shortcut to Primary output from AthanManager (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_AF7D6E53A7E64B92A79F342E1D6F74C8"
+            "Folder" = "8:_806245E19575491093E429B167A515FE"
+            "WorkingFolder" = "8:_F195E9C85AB7476188695F54F0AD8630"
+            "Icon" = "8:_BA58BDA1304B4FEA9B3D4903D4E3520B"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9EDB541D9CD848CF96B8D5DFF818DCAA"
+            {
+            "Name" = "8:Shortcut to Primary output from AthanManager (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_AF7D6E53A7E64B92A79F342E1D6F74C8"
+            "Folder" = "8:_AFAA7D333CE74950ADFEA7B88F8CFA70"
+            "WorkingFolder" = "8:_F195E9C85AB7476188695F54F0AD8630"
+            "Icon" = "8:_BA58BDA1304B4FEA9B3D4903D4E3520B"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {
