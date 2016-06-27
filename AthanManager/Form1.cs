@@ -36,27 +36,19 @@ namespace AthanManager
         {
             if (!hasBeenLoaded)
             {
-                // Create a simple tray menu with only one item.
                 trayMenu = new ContextMenu();
                 trayMenu.MenuItems.Add("إعدادات التطبيق", OnConfig);
                 trayMenu.MenuItems.Add("إغلاق التطبيق", OnExit);
 
-                // Create a tray icon. In this example we use a
-                // standard system icon for simplicity, but you
-                // can of course use your own custom icon too.
                 trayIcon = new NotifyIcon();
                 trayIcon.Text = "مذكّر أوقات الصلاة الإصدار الأول";
                 trayIcon.Icon = this.Icon;
-
-                // Add menu to tray icon and show it.
                 trayIcon.ContextMenu = trayMenu;
                 trayIcon.Visible = true;
 
                 Visible = false; // Hide form window.
                 ShowInTaskbar = false; // Remove from taskbar.
                 hasBeenLoaded = true;
-                //base.OnLoad(e);
-
             }
 
             currentCityTxt.Text = Properties.Settings.Default["current_city"].ToString();
@@ -66,21 +58,6 @@ namespace AthanManager
             asr = Properties.Settings.Default["asr"].ToString();
             maghrib = Properties.Settings.Default["maghrib"].ToString();
             isha = Properties.Settings.Default["isha"].ToString();
-
-            //MessageBox.Show(fajr + dhuhr + asr + maghrib + isha);
-        }
-
-        // Define the event handlers. 
-        private static void OnChanged(object source, FileSystemEventArgs e)
-        {
-            // Specify what is done when a file is changed, created, or deleted.
-            //Console.WriteLine("File: " + e.FullPath + " " + e.ChangeType);
-        }
-
-        private static void OnRenamed(object source, RenamedEventArgs e)
-        {
-            // Specify what is done when a file is renamed.
-            //Console.WriteLine("File: {0} renamed to {1}", e.OldFullPath, e.FullPath);
         }
 
         private void OnExit(object sender, EventArgs e)
@@ -100,7 +77,6 @@ namespace AthanManager
             Visible = false;
             ShowInTaskbar = false;
             this.Hide();
-            //this.WindowState = FormWindowState.Normal;
         }
 
         private void OnConfig(object sender, EventArgs e)
@@ -183,9 +159,40 @@ namespace AthanManager
         private void timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = "الساعة الآن: " + DateTime.Now.ToString("hh:mm:ss tt").ToLower();
+            string current_time = DateTime.Now.ToString("hh:mm tt").ToLower();
+            
+            if(string.Compare(current_time,fajr) == 0)
+            {
+                call_athan("الفجر");
+            }
+            else if(string.Compare(current_time, dhuhr) == 0)
+            {
+                call_athan("الظهر");
+            }
+            else if (string.Compare(current_time, asr) == 0)
+            {
+                call_athan("العصر");
+            }
+            else if (string.Compare(current_time, maghrib) == 0)
+            {
+                call_athan("المغرب");
+            }
+            else if (string.Compare(current_time, isha) == 0)
+            {
+                call_athan("العشاء");
+            }
+            else
+            {
+
+            }
         }
 
         private void currentCityTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void call_athan(string time)
         {
 
         }

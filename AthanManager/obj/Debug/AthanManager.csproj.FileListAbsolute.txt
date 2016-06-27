@@ -7,3 +7,10 @@ c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\ob
 c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.pdb
 c:\users\dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.Form1.resources
 C:\Users\Dell\Documents\Visual Studio 2015\Projects\AthanManager\AthanManager\bin\Debug\app.config
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.csprojResolveAssemblyReference.cache
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.Form2.resources
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Debug\CSCore.dll
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Debug\CSCore.xml
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Debug\Interop.WMPLib.dll
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\Interop.WMPLib.dll
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Debug\AthanManager.csproj.ResolveComReference.cache
