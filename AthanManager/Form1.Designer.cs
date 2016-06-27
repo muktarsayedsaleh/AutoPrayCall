@@ -37,18 +37,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.currentCityTxt);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 145);
+            this.groupBox1.Size = new System.Drawing.Size(434, 121);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "إعدادات الـ API";
@@ -59,7 +61,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(420, 47);
+            this.label2.Size = new System.Drawing.Size(420, 36);
             this.label2.TabIndex = 2;
             this.label2.Text = "-";
             // 
@@ -93,9 +95,9 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(12, 160);
+            this.label3.Location = new System.Drawing.Point(6, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(434, 13);
+            this.label3.Size = new System.Drawing.Size(422, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "الساعة الآن:";
             // 
@@ -105,12 +107,22 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(12, 136);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(434, 57);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "هذا التطبيق من برمجة: م.مختار سيّد صالح\r\nwww.mukhtar.me\r\nmokhtar_ss@hotmail.com\r\n" +
+    "00601121370460\r\n";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 179);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(459, 191);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -135,6 +147,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
