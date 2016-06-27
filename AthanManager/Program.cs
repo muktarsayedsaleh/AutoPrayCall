@@ -14,9 +14,8 @@ namespace AthanManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //myVars.myMainForm = new Form1();
-            //Application.Run(myVars.myMainForm);
-            Application.Run(new Form2());
+            myVars.myMainForm = new Form1();
+            Application.Run(myVars.myMainForm);
         }
 
         private static void OnExit(object sender, EventArgs e)

@@ -20,7 +20,7 @@ namespace AthanManager
         private ContextMenu trayMenu;
         private bool hasBeenLoaded = false;
 
-        private string fajr, dhuhr, asr, maghrib, isha;
+        private string current_city, fajr, dhuhr, asr, maghrib, isha;
 
         public Form1()
         {
@@ -51,13 +51,16 @@ namespace AthanManager
                 hasBeenLoaded = true;
             }
 
-            currentCityTxt.Text = Properties.Settings.Default["current_city"].ToString();
-
+            current_city = Properties.Settings.Default["current_city"].ToString();
             fajr = Properties.Settings.Default["fajr"].ToString();
             dhuhr = Properties.Settings.Default["dhuhr"].ToString();
             asr = Properties.Settings.Default["asr"].ToString();
             maghrib = Properties.Settings.Default["maghrib"].ToString();
             isha = Properties.Settings.Default["isha"].ToString();
+
+            currentCityTxt.Text = current_city;
+
+            timer1.Enabled = true;
         }
 
         private void OnExit(object sender, EventArgs e)
@@ -102,6 +105,11 @@ namespace AthanManager
 
         } //WndProc 
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Closing(
             System.Object sender,
             System.ComponentModel.CancelEventArgs e)
@@ -127,6 +135,8 @@ namespace AthanManager
                     asr = response_object["asr"].ToString();
                     maghrib = response_object["maghrib"].ToString();
                     isha = response_object["isha"].ToString();
+
+                    current_city = city;
 
                     output += "الفجر: " + fajr;
                     output += " / الظهر: " + dhuhr;
@@ -159,31 +169,51 @@ namespace AthanManager
         private void timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = "الساعة الآن: " + DateTime.Now.ToString("hh:mm:ss tt").ToLower();
-            string current_time = DateTime.Now.ToString("hh:mm tt").ToLower();
-            
-            if(string.Compare(current_time,fajr) == 0)
+            string current_time = DateTime.Now.ToString("h:mm tt").ToLower();
+
+            if(string.Compare(current_time.Trim().ToUpper(), fajr.Trim().ToUpper()) == 0)
             {
-                call_athan("الفجر");
+                if (myVars.lastAthan != "fajr")
+                {
+                    myVars.lastAthan = "fajr";
+                    call_athan("الفجر");
+                }
             }
-            else if(string.Compare(current_time, dhuhr) == 0)
+            else if (string.Compare(current_time.Trim().ToUpper(), dhuhr.Trim().ToUpper()) == 0)
             {
-                call_athan("الظهر");
+                if (myVars.lastAthan != "dhuhr")
+                {
+                    myVars.lastAthan = "dhuhr";
+                    call_athan("الظهر");
+                }
             }
-            else if (string.Compare(current_time, asr) == 0)
+            else if (string.Compare(current_time.Trim().ToUpper(), asr.Trim().ToUpper()) == 0)
             {
-                call_athan("العصر");
+                if (myVars.lastAthan != "asr")
+                {
+                    myVars.lastAthan = "asr";
+                    call_athan("العصر");
+                }
             }
-            else if (string.Compare(current_time, maghrib) == 0)
+            else if (string.Compare(current_time.Trim().ToUpper(), maghrib.Trim().ToUpper()) == 0)
             {
-                call_athan("المغرب");
+                if (myVars.lastAthan != "maghrib")
+                {
+                    myVars.lastAthan = "maghrib";
+                    call_athan("المغرب");
+                }
             }
-            else if (string.Compare(current_time, isha) == 0)
+            else if (string.Compare(current_time.Trim().ToUpper(), isha.Trim().ToUpper()) == 0)
             {
-                call_athan("العشاء");
+                if (myVars.lastAthan != "isha")
+                {
+                    myVars.lastAthan = "isha";
+                    call_athan("العشاء");
+                }
             }
             else
             {
-
+                //nothing yet !
             }
         }
 
@@ -194,7 +224,13 @@ namespace AthanManager
 
         private void call_athan(string time)
         {
-
+            if (myVars.isAthanTime == false)
+            {
+                myVars.isAthanTime = true;
+                string msg = " حان الآن موعد أذان " + time + " حسب التوقيت المحلي لمدينة " + current_city;
+                Form2 call_form = new Form2(msg);
+                call_form.ShowDialog();
+            }
         }
     }
 }

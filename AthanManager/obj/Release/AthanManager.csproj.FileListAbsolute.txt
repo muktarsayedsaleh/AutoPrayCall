@@ -1,0 +1,15 @@
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\AthanManager.exe.config
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\Interop.WMPLib.dll
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.csproj.ResolveComReference.cache
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\app.config
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\AthanManager.exe
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\AthanManager.pdb
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\CSCore.dll
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\CSCore.xml
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\bin\Release\Interop.WMPLib.dll
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.Form1.resources
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.Form2.resources
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.Properties.Resources.resources
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.csproj.GenerateResource.Cache
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.exe
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.pdb

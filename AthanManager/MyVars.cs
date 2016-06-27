@@ -10,6 +10,9 @@ namespace AthanManager
     public static class myVars
     {
         public static AthanManager.Form1 myMainForm = null;
+        public static bool isAthanTime = false;
+        public static string lastAthan = "";
+
         // Returns JSON string
         public static string update_pray_times(string city)
         {
