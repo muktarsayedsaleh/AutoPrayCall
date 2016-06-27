@@ -11,6 +11,7 @@ using System.Security.Permissions;
 using System.Net.Sockets;
 using System.Configuration;
 using System.Web.Script.Serialization;
+using Microsoft.Win32;
 
 namespace AthanManager
 {
@@ -61,6 +62,17 @@ namespace AthanManager
             currentCityTxt.Text = current_city;
 
             timer1.Enabled = true;
+
+            //make sure to add this app automatically to startup !!
+            AddApplicationToStartup();
+        }
+
+        public static void AddApplicationToStartup()
+        {
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true))
+            {
+                key.SetValue("AthanAutoCall", "\"" + Application.ExecutablePath + "\"");
+            }
         }
 
         private void OnExit(object sender, EventArgs e)
