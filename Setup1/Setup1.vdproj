@@ -309,7 +309,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Auto Athan Call"
         "ProductCode" = "8:{95FE707D-9413-465D-B8F7-334521E79D21}"
-        "PackageCode" = "8:{0E4687DF-D33D-4DAD-888F-2EDE9F49E2DB}"
+        "PackageCode" = "8:{CBE4383B-ECA5-4CFA-9205-BA16C80667E8}"
         "UpgradeCode" = "8:{2475BFAE-F965-46AA-B69D-AD9FAF355990}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -431,7 +431,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_494A8F7E9E8D47B8B245A535E7F2AB33"
             {
-            "Name" = "8:Shortcut to Primary output from AthanManager (Active)"
+            "Name" = "8:autoAthanCaller"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -445,7 +445,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9EDB541D9CD848CF96B8D5DFF818DCAA"
             {
-            "Name" = "8:Shortcut to Primary output from AthanManager (Active)"
+            "Name" = "8:autoAthanCaller"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

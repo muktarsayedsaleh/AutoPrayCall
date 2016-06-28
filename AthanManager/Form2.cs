@@ -14,6 +14,7 @@ namespace AthanManager
     public partial class Form2 : Form
     {
         private string msg;
+        private decimal minutes;
         WMPLib.WindowsMediaPlayer Player;
 
         public Form2(string msg)
@@ -57,6 +58,16 @@ namespace AthanManager
             Player.URL = Application.StartupPath + "\\athan.mp3";
             Player.controls.play();
 
+            try
+            {
+                minutes = Decimal.Parse(Properties.Settings.Default["minutes"].ToString());
+            }
+            catch(Exception)
+            {
+                minutes = 4;
+            }
+            timer1.Interval = 60000 * (int)minutes;
+            timer1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)

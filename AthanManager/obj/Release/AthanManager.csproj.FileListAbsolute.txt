@@ -13,3 +13,4 @@ C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\ob
 C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.csproj.GenerateResource.Cache
 C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.exe
 C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.pdb
+C:\Users\Dell\documents\visual studio 2015\Projects\AthanManager\AthanManager\obj\Release\AthanManager.csprojResolveAssemblyReference.cache

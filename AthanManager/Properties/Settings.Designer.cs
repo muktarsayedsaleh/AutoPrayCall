@@ -94,5 +94,17 @@ namespace AthanManager.Properties {
                 this["isha"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public string minutes {
+            get {
+                return ((string)(this["minutes"]));
+            }
+            set {
+                this["minutes"] = value;
+            }
+        }
     }
 }

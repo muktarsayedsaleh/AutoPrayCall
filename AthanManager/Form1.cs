@@ -21,7 +21,7 @@ namespace AthanManager
         private ContextMenu trayMenu;
         private bool hasBeenLoaded = false;
 
-        private string current_city, fajr, dhuhr, asr, maghrib, isha;
+        private string current_city, fajr, dhuhr, asr, maghrib, isha, minutes;
 
         public Form1()
         {
@@ -58,8 +58,10 @@ namespace AthanManager
             asr = Properties.Settings.Default["asr"].ToString();
             maghrib = Properties.Settings.Default["maghrib"].ToString();
             isha = Properties.Settings.Default["isha"].ToString();
+            minutes = Properties.Settings.Default["minutes"].ToString();
 
             currentCityTxt.Text = current_city;
+            numericUpDown1.Value = Decimal.Parse(minutes);
 
             timer1.Enabled = true;
 
@@ -122,6 +124,11 @@ namespace AthanManager
 
         }
 
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Closing(
             System.Object sender,
             System.ComponentModel.CancelEventArgs e)
@@ -132,7 +139,15 @@ namespace AthanManager
         private void button2_Click(object sender, EventArgs e)
         {
             string city = currentCityTxt.Text;
-            if(city != "" && city!=string.Empty)
+
+            if (numericUpDown1.Value > 10 || numericUpDown1.Value < 0)
+            {
+                MessageBox.Show("يرجى إدخال قيمة مناسبة للتأخير الزمني");
+                return;
+            }
+
+
+            if (city != "" && city!=string.Empty)
             {
                 label2.Text = "جاري التحميل ...";
                 string response = myVars.update_pray_times(city.ToLower());
@@ -148,6 +163,7 @@ namespace AthanManager
                     maghrib = response_object["maghrib"].ToString();
                     isha = response_object["isha"].ToString();
 
+                    minutes = numericUpDown1.Value.ToString();
                     current_city = city;
 
                     output += "الفجر: " + fajr;
@@ -162,6 +178,9 @@ namespace AthanManager
                     Properties.Settings.Default["asr"] = asr;
                     Properties.Settings.Default["maghrib"] = maghrib;
                     Properties.Settings.Default["isha"] = isha;
+
+                    Properties.Settings.Default["minutes"] = minutes;
+
                     Properties.Settings.Default.Save();
 
                 }
